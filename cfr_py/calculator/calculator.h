@@ -65,7 +65,8 @@ public:
 
     // 当前step下给定底牌的胜率 = [0,1]（其它玩家底牌未知，不考虑下注动作）
     // step = {0,1,2,3} 
-    double prior_win_rate(int h0, int h1, int p0, int p1, int p2, int p3, int p4, int step,int MCtimes=10000);
+    // NOP: 本场入局的对手数 = {1,2,3,4,5}
+    double prior_win_rate(int h0, int h1, int p0, int p1, int p2, int p3, int p4, int step,int NOP=5,int MCtimes=20000);
 
 };
 

@@ -194,7 +194,7 @@ int Calculator::potential_power(int h0, int h1, int p0, int p1, int p2, int p3, 
 // }
 
 #define USE_CACHE
-double Calculator::prior_win_rate(int h0, int h1, int p0, int p1, int p2, int p3, int p4, int step,int MCtimes)
+double Calculator::prior_win_rate(int h0, int h1, int p0, int p1, int p2, int p3, int p4, int step,int NOP,int MCtimes)
 {
     int holes[2] = {h0, h1};
 	int pubs[5] = {p0, p1, p2, p3, p4};
@@ -206,7 +206,7 @@ double Calculator::prior_win_rate(int h0, int h1, int p0, int p1, int p2, int p3
     auto x = pwr_cache.find(key);
     if(x != pwr_cache.end()) return x->second;
 #endif
-    const int NOP = 5;
+    //const int NOP = 5;
     int pool[52];
     int sp = 0;
     for(int i=0;i<52;i++){
